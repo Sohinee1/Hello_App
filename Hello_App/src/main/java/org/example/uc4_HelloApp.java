@@ -1,64 +1,20 @@
 package org.example;
 
 
-public static void main (String[] args){
-    String[] banner = {
+public class UC4 {
+    public static void main(String[] args) {
 
-            String.join("  ",
-                    " ***** ",
-                    " ***** ",
-                    " ***** ",
-                    " ***** "
-            ),
+        String result;
 
-            String.join("  ",
-                    "*     *",
-                    "*     *",
-                    "*     *",
-                    "*      "
-            ),
+        // Check if arguments are provided
+        if (args.length == 0) {
+            result = "World";
+        } else {
+            // Join all names with comma and space
+            result = String.join(", ", args);
+        }
 
-            String.join("  ",
-                    "*     *",
-                    "*     *",
-                    "*     *",
-                    "*      "
-            ),
-
-            String.join("  ",
-                    "*     *",
-                    "*     *",
-                    " ***** ",
-                    " ***** "
-            ),
-
-            String.join("  ",
-                    "*     *",
-                    "*     *",
-                    "*      ",
-                    "      *"
-            ),
-
-            String.join("  ",
-                    "*     *",
-                    "*     *",
-                    "*      ",
-                    "      *"
-            ),
-
-            String.join("  ",
-                    " ***** ",
-                    " ***** ",
-                    "*      ",
-                    " ***** "
-            )
-    };
-
-    // Print using for-each loop
-    for (String line : banner) {
-        System.out.println(line);
+        // Display greeting
+        System.out.println("Hello, " + result + "!");
     }
 }
-}
-
-
